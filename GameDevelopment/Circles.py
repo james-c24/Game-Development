@@ -17,4 +17,4 @@ def draw():
         g += 10
         b -= 5
         radius -= 5
-      
+pgzrun.go()

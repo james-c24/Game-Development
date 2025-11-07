@@ -50,7 +50,7 @@ def draw():
 
     if current_question:
         screen.draw.filled_rect(question_box,"pink")
-        screen.draw.textbox(current_question[0],question_box,color="black",fontsize=30)
+        screen.draw.textbox(current_question[0],question_box,color="black")
 
         for i, box in enumerate(answer_boxes):
             screen.draw.filled_Rect(box,"pink")
@@ -85,7 +85,7 @@ def on_mouse_down(pos):
     
     for i, box in enumerate(answer_boxes):
         if box.collidepoint(pos):
-            if current_question[5] == i + 1:
+            if int(current_question[5]) == i + 1:
                 score += 1
             nest_question()
             return
